@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    font-family:"Fira Coda";
+}
+div {
+    line-height: 1.8em;
+    border-style: solid;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+}
+h1,h2 {
+    color: darkolivegreen;
+}
+h3 {
+    color:forestgreen;
+}
+p, ul{
+    text-align: left;
+}
+.banner{
+    position:absolute;
+    background-image: url(../images/Banner-image.jpg);
+    height: 200px;
+    background-size:100%;
+    box-sizing:border-box;
+    border-style: solid;
+    border-width: 100px;
+    border-top-width: 0px;
+    border-bottom-width: 80px;
+}
+.Content-img{
+    background-image: url(../images/Background.jpg);
+    background-size: 100%;
+    height: 1080px;
+    filter: blur(6px);
+    background-size:cover;
+    background-position-x: center;
+}
+.Content-text{
+    position: relative;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%,-120%);
+    width: 60%;
+    padding: 40px;
+    color:navajowhite;
+    border-color: white;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-style:solid;
+    background-color:rgba(0, 0, 0, 0.486);
+    
+    
+}
+/*  This section is just an extra challenge I gave myself because I installed the Live Server extension in VS Code and tried to see
+    if I could display my website on my phone. The problem was that it didn't format correctly on my phone, so I spent a bunch of time trying to
+    learn how to make it so it would know to change the size and position of the content of the page based on how big the screen is
+*/
+@media only screen and (max-width: 1270px) {
+    .banner{
+        background-size: 200%;
+        border-style:none;
+    }
+    .Content-text{
+        <height:100%;
+        padding: 30px 0px 0px;>
+        /* I'll admit, I don't know why
+        the < and > are needed, but after
+        adding them, it just worked for some reason? */
+        transform: translate(-50%,-400%);
+        font-size: small;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Content-text{
+        <height:100%;
+        padding: 30px 0px 0px;>
+        transform: translate(-50%,-400%);
+        top:20%;
+        font-size: small;
+    }  
+}
+@media only screen and (max-width: 400px) {
+    .Content-text{
+        <height:100%;
+        padding: 30px 0px 0px;>
+        transform: translate(-50%,-400%);
+        top:150%;
+        font-size: small;
+    }
+}
